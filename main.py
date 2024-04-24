@@ -105,7 +105,7 @@ class TodoApp(ft.UserControl):
 
         self.items_left = ft.Text("0 items left")
 
-        # application's root control (i.e. "view") containing all other controls
+        # корневой элемент управления приложения (т.е. "представление"), содержащий все остальные элементы управления
         return ft.Column(
             width=600,
             controls=[
@@ -184,10 +184,10 @@ async def main(page: ft.Page):
     page.scroll = "adaptive"
     await page.update_async()
 
-    # create application instance
+    # Создание экземпляра приложения
     app = TodoApp()
 
-    # add application's root control to the page
+    # Добавление корневого элемента управления приложения на страницу
     await page.add_async(app)
 
 
